@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Sacrificial Ceremony</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #countdown-screen {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        #countdown-caption {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        #countdown {
+            font-size: 4em;
+            font-weight: bold;
+            color: yellow; /* Or any color you like */
+        }
+    </style>
 </head>
 <body>
     <div class="intro-screen">
@@ -22,7 +41,12 @@
 
         <div id="result-area" class="hidden">
             <h2>The Bookwyrm has chosen:</h2>
-            <p id="chosen-book-temp"></p>
+            <p id="chosen-book-temp" class="animating-text"></p>
+        </div>
+
+        <div id="countdown-screen" class="hidden">
+            <h2 id="countdown-caption">The Bookwyrm ponders what to consume....</h2>
+            <p id="countdown">5</p>
         </div>
     </div>
 
