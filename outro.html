@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sacrifice Has Been Made!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .outro-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            display: flex; /* Enable flexbox for centering content within */
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .outro-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center; /* Ensure title is centered */
+        }
+
+        #chosen-book-final {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: gold;
+            text-align: center; /* Ensure book title is centered */
+        }
+
+        #outro-image {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            display: block; /* Ensure it behaves as a block-level element */
+            margin-left: auto; /* Create equal left and right margins */
+            margin-right: auto;
+        }
+
+        #reset-button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #555;
+            color: #eee;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #reset-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="outro-content">
+        <h1>A Sacrifice Has Been Made!</h1>
+        <p id="chosen-book-final"></p>
+        <img id="outro-image" src="chosen_book_image.jpg" alt="Chosen Book Display">
+        <button id="reset-button">Perform Another Ceremony</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chosenBook = localStorage.getItem('chosenBook');
+            const chosenBookFinalElement = document.getElementById('chosen-book-final');
+            const resetButton = document.getElementById('reset-button');
+
+            if (chosenBook) {
+                chosenBookFinalElement.textContent = chosenBook;
+            }
+
+            resetButton.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

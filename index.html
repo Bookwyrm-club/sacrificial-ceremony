@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sacrificial Ceremony</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro-screen">
+        <h1>Begin the sacrificial ceremony.</h1>
+        <button id="enter-button">Summon the Bookwyrm!</button>
+    </div>
+
+    <div class="main-content hidden">
+        <h1>The Sacrificial Ceremony</h1>
+        <div class="input-area">
+            <label for="book-picks">Enter book titles (one per line):</label><br>
+            <textarea id="book-picks" rows="10" cols="50"></textarea><br><br>
+            <button id="summon-button">Feed the Bookwyrm!</button>
+        </div>
+
+        <div id="result-area" class="hidden">
+            <h2>The Bookwyrm has chosen:</h2>
+            <p id="chosen-book-temp"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
